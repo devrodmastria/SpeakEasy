@@ -3,7 +3,39 @@ nav.navbar.navbar-default.navbar-fixed-top {
 	text-align: center;
 }
 
-h1 {
+h1, h2 {
 	text-align: center;
 	color: white;
+}
+
+body > div.container {
+	margin-top: 100px;
+}
+
+input[type="file"] {
+}
+
+.dot1 {
+	color: red;
+}
+
+.dot2 {
+	color: orange;
+}
+
+.dot3 {
+	color: orange;
+}
+
+.dot4 {
+	color: blue;
+}
+
+div.section {
+	margin: 10px;
+}
+
+.row {
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
