@@ -47,6 +47,11 @@ $("#submitAudio").click(function (e) {
 	}
 });
 
+$("#reset").click(function (e) {
+	$(".section3").fadeOut(300);
+	  $(".section1").delay(300).fadeIn(300);
+});	
+
 function runWolfram() {
 	var f1comp = false;
 	var f2comp = false;
