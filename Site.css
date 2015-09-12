@@ -1,3 +1,7 @@
+body {
+	background-image: otriangles.png;
+}
+
 nav.navbar.navbar-default.navbar-fixed-top {
 	background-color: #FF9A56;
 	text-align: center;
@@ -38,4 +42,9 @@ div.section {
 .row {
 	margin-top: 10px;
 	margin-bottom: 10px;
+}
+
+button {
+	margin: 0 auto;
+	color: #FFC64C;
 }
