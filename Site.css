@@ -1,5 +1,6 @@
 body {
-	background-image: otriangles.png;
+	background-image: url("otriangles.png");
+
 }
 
 nav.navbar.navbar-default.navbar-fixed-top {
@@ -40,8 +41,8 @@ div.section {
 }
 
 .row {
-	margin-top: 10px;
-	margin-bottom: 10px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 button {
@@ -50,5 +51,4 @@ button {
 }
 
 .section {
-	display: none;
 }
