@@ -48,3 +48,7 @@ button {
 	margin: 0 auto;
 	color: #FFC64C;
 }
+
+.section {
+	display: none;
+}
