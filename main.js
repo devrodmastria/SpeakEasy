@@ -30,12 +30,58 @@ $("#submitAudio").click(function (e) {
 	  		console.log(e);
 	  	}});
 
-	  var recordingTranscriptType = new Parse.Object("Recording");
-	  recordingTranscriptType.set("file", parseFile);
+	  var recordingTranscriptType = new Parse.Object("RecordingTranscript");
+	  recordingTranscriptType.set("file", parseFileTranscript);
+	  recordingTranscriptType.set("size", fileT.size);
 	  recordingTranscriptType.save();
 
-	  var recordingReciteType = new Parse.Object("Recording");
-	  recordingReciteType.set("file", parseFile);
+	  var recordingReciteType = new Parse.Object("RecordingRecite");
+	  recordingReciteType.set("file", parseFileRecite);
+	  recordingReciteType.set("size", fileR.size);
 	  recordingReciteType.save();
+
+	  $(".section1").fadeOut(300);
+	  $(".section2").delay(300).fadeIn(300);
+
+	  runWolfram();
 	}
 });
+
+function runWolfram() {
+	var f1comp = false;
+	var f2comp = false;
+	var tVal, rVal;
+	Parse.Cloud.run("wolframTranscript", {}, {
+		success: function(s) {
+			f1comp = true;
+			tVal = s;
+			if(f1comp&&f2comp) analyze(tVal, rVal);
+		}, error: function(e) {console.log(error);}
+	});
+	Parse.Cloud.run("wolframRecite", {}, {
+		success: function(s) {
+			f2comp = true;
+			rVal = s;
+			if(f1comp&&f2comp) analyze(tVal, rVal);
+		}, error: function(e) {console.log(error);}
+	});
+}
+
+function analyze(a,b) {
+	var error = ((b-a)/a)*100;
+	if(Math.abs(error)<15) {
+		//all good
+	} else {
+		if(error > 0) {
+			//higher
+			$(".x-percent").text(Math.abs(error));
+			$(".lower, .doing-great").hide();
+		} else {
+			//lower
+			$(".x-percent").text(Math.abs(error));
+			$(".higher, .doing-great").hide();
+		}
+	}
+	$(".section2").fadeOut(300);
+	$(".section3").delay(300).fadeIn(300);
+}

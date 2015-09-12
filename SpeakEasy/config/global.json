@@ -1,0 +1,14 @@
+{
+  "global": {
+    "parseVersion": "latest"
+  },
+  "applications": {
+    "SpeakEasy": {
+      "applicationId": "qJq2KO9TNwGiXmj9ghgAaIN1UDoowkWuaCv67BUU",
+      "masterKey": "7njEuVDIEXvgAHv8sMzSfXJhxfOkCQATxdKXgLc2"
+    },
+    "_default": {
+      "link": "SpeakEasy"
+    }
+  }
+}
