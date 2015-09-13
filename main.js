@@ -48,8 +48,9 @@ $("#submitAudio").click(function (e) {
 });
 
 $("#reset").click(function (e) {
-	$(".section3").fadeOut(300);
-	  $(".section1").delay(300).fadeIn(300);
+//	$(".section3").fadeOut(300);
+//	$(".section1").delay(300).fadeIn(300);
+	location.reload();
 });	
 
 function runWolfram() {
