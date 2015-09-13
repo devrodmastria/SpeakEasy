@@ -22,11 +22,11 @@ input[type="file"] {
 	display: block;
 }
 
-#audioTranscriptRow > p, #audioReciteRow > p {
+#audioTranscriptRow > h2, #audioReciteRow > h2 {
 	visibility: hidden;
 }
 
-#audioTranscriptRow:hover > p, #audioReciteRow:hover > p {
+#audioTranscriptRow:hover > h2, #audioReciteRow:hover > h2 {
 	visibility: visible;
 }
 
@@ -62,4 +62,5 @@ button {
 }
 
 .section {
+	display: hidden;
 }
