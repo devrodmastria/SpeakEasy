@@ -48,9 +48,8 @@ div.section {
 	margin-bottom: 20px;
 }
 
-button {
+div.row button {
 	margin: 0 auto;
-	color: #FFC64C;
 }
 
 .section {
