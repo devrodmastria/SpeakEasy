@@ -18,15 +18,8 @@ body > div.container {
 }
 
 input[type="file"] {
-	visibility: hidden;
-}
-
-#audioTranscriptRow > h2, #audioReciteRow > h2 {
-	visibility: hidden;
-}
-
-#audioTranscriptRow:hover > h2, #audioReciteRow:hover > h2 {
-	visibility: visible;
+    margin: auto 0;
+    width: 30%; 
 }
 
 .dot1 {

@@ -53,6 +53,18 @@ $("#reset").click(function (e) {
 	location.reload(true);
 });	
 
+$(function() {
+	$("#audioTranscript").tooltip({
+		content: "Add an audio file here of you reading the transcript"
+	});
+});
+
+$(function() {
+	$("#audioRecite").tooltip({
+		content: "Add an audio file here of you reciting the speech from memory"
+	});
+});
+
 function runWolfram() {
 	var f1comp = false;
 	var f2comp = false;
