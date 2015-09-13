@@ -74,7 +74,7 @@ function runWolfram() {
 			f1comp = true;
 			tVal = s;
 			if(f1comp&&f2comp) analyze(tVal, rVal);
-		}, error: function(e) {console.log(error);}
+		}, error: function(e) {console.log(e);}
 	});
 	Parse.Cloud.run("wolframRecite", {}, {
 		success: function(s) {
