@@ -81,7 +81,7 @@ function runWolfram() {
 			f2comp = true;
 			rVal = s;
 			if(f1comp&&f2comp) analyze(tVal, rVal);
-		}, error: function(e) {console.log(error);}
+		}, error: function(e) {console.log(e);}
 	});
 }
 

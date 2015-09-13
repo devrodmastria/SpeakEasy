@@ -55,3 +55,20 @@ div.row button {
 .section {
 	display: hidden;
 }
+
+.loading-icon-red {
+    background-image: url("loading-gif-red.gif");
+}
+
+.loading-icon-yellow {
+    background-image: url("loading-gif-yellow.gif");
+
+}
+
+.loading-icon-green {
+    background-image: url("loading-gif-green.gif");
+}
+
+.loading-icon-blue {
+    background-image: url("loading-gif-blue.gif");
+}
